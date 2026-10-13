@@ -30,5 +30,11 @@ pipeline {
                                  fingerprint: true
             }
         }
+
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t student-starter:latest .'
+            }
+        }
     }
 }
