@@ -13,20 +13,14 @@ pipeline {
             }
         }
 
-        stage('Clean and Test') {
+        stage('Build and Test') {
             steps {
-                sh 'mvn clean test'
+                sh 'mvn clean verify'
             }
             post {
                 always {
                     junit 'course-registration-app/target/surefire-reports/TEST-*.xml'
                 }
-            }
-        }
-
-        stage('Package') {
-            steps {
-                sh 'mvn package'
             }
         }
 
@@ -38,4 +32,3 @@ pipeline {
         }
     }
 }
-
