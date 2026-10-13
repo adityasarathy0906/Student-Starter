@@ -1,204 +1,0 @@
-[1mdiff --git a/.gitignore b/.gitignore[m
-[1mindex 0f50f9f..4787725 100644[m
-[1m--- a/.gitignore[m
-[1m+++ b/.gitignore[m
-[36m@@ -2,4 +2,4 @@[m [mtarget/[m
- *.class[m
- .idea/[m
- .vscode/[m
-[31m-*.iml[m
-[32m+[m[32m*.iml[m[41m[m
-[1mdiff --git a/pom.xml b/pom.xml[m
-[1mindex 95a79aa..7b2c776 100644[m
-[1m--- a/pom.xml[m
-[1m+++ b/pom.xml[m
-[36m@@ -1,43 +1,56 @@[m
-[31m-<?xml version="1.0" encoding="UTF-8"?>[m
-[31m-[m
-[31m-<project xmlns="http://maven.apache.org/POM/4.0.0"[m
-[31m-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"[m
-[31m-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0[m
-[31m-         https://maven.apache.org/xsd/maven-4.0.0.xsd">[m
-[31m-[m
-[31m-    <modelVersion>4.0.0</modelVersion>[m
-[31m-[m
-[31m-    <groupId>com.university</groupId>[m
-[31m-    <artifactId>course-registration</artifactId>[m
-[31m-    <version>1.0-SNAPSHOT</version>[m
-[31m-[m
-[31m-    <properties>[m
-[31m-        <maven.compiler.source>17</maven.compiler.source>[m
-[31m-        <maven.compiler.target>17</maven.compiler.target>[m
-[31m-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>[m
-[31m-    </properties>[m
-[31m-[m
-[31m-    <dependencies>[m
-[31m-[m
-[31m-        <dependency>[m
-[31m-            <groupId>org.junit.jupiter</groupId>[m
-[31m-            <artifactId>junit-jupiter</artifactId>[m
-[31m-            <version>5.11.0</version>[m
-[31m-            <scope>test</scope>[m
-[31m-        </dependency>[m
-[31m-[m
-[31m-    </dependencies>[m
-[31m-[m
-[31m-    <build>[m
-[31m-        <plugins>[m
-[31m-[m
-[31m-            <plugin>[m
-[31m-                <groupId>org.apache.maven.plugins</groupId>[m
-[31m-                <artifactId>maven-surefire-plugin</artifactId>[m
-[31m-                <version>3.5.0</version>[m
-[31m-            </plugin>[m
-[31m-[m
-[31m-        </plugins>[m
-[31m-    </build>[m
-[31m-[m
-[31m-</project>[m
-\ No newline at end of file[m
-[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m[41m[m
-[32m+[m[32m<project xmlns="http://maven.apache.org/POM/4.0.0"[m[41m[m
-[32m+[m[32m         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"[m[41m[m
-[32m+[m[32m         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0[m[41m[m
-[32m+[m[32m         https://maven.apache.org/xsd/maven-4.0.0.xsd">[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    <modelVersion>4.0.0</modelVersion>[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    <groupId>com.university</groupId>[m[41m[m
-[32m+[m[32m    <artifactId>course-registration</artifactId>[m[41m[m
-[32m+[m[32m    <version>1.0-SNAPSHOT</version>[m[41m[m
-[32m+[m[32m    <packaging>pom</packaging>[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    <modules>[m[41m[m
-[32m+[m[32m        <module>course-registration-app</module>[m[41m[m
-[32m+[m[32m    </modules>[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    <properties>[m[41m[m
-[32m+[m[32m        <maven.compiler.release>17</maven.compiler.release>[m[41m[m
-[32m+[m[32m        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>[m[41m[m
-[32m+[m[32m        <junit.version>5.11.0</junit.version>[m[41m[m
-[32m+[m[32m    </properties>[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    <dependencyManagement>[m[41m[m
-[32m+[m[32m        <dependencies>[m[41m[m
-[32m+[m[32m            <dependency>[m[41m[m
-[32m+[m[32m                <groupId>org.junit.jupiter</groupId>[m[41m[m
-[32m+[m[32m                <artifactId>junit-jupiter</artifactId>[m[41m[m
-[32m+[m[32m                <version>${junit.version}</version>[m[41m[m
-[32m+[m[32m                <scope>test</scope>[m[41m[m
-[32m+[m[32m            </dependency>[m[41m[m
-[32m+[m[32m        </dependencies>[m[41m[m
-[32m+[m[32m    </dependencyManagement>[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    <build>[m[41m[m
-[32m+[m[32m        <pluginManagement>[m[41m[m
-[32m+[m[32m            <plugins>[m[41m[m
-[32m+[m[32m                <plugin>[m[41m[m
-[32m+[m[32m                    <groupId>org.apache.maven.plugins</groupId>[m[41m[m
-[32m+[m[32m                    <artifactId>maven-compiler-plugin</artifactId>[m[41m[m
-[32m+[m[32m                    <version>3.13.0</version>[m[41m[m
-[32m+[m[32m                    <configuration>[m[41m[m
-[32m+[m[32m                        <release>${maven.compiler.release}</release>[m[41m[m
-[32m+[m[32m                    </configuration>[m[41m[m
-[32m+[m[32m                </plugin>[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m                <plugin>[m[41m[m
-[32m+[m[32m                    <groupId>org.apache.maven.plugins</groupId>[m[41m[m
-[32m+[m[32m                    <artifactId>maven-surefire-plugin</artifactId>[m[41m[m
-[32m+[m[32m                    <version>3.5.0</version>[m[41m[m
-[32m+[m[32m                </plugin>[m[41m[m
-[32m+[m[32m            </plugins>[m[41m[m
-[32m+[m[32m        </pluginManagement>[m[41m[m
-[32m+[m[32m    </build>[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m</project>[m[41m[m
-[1mdiff --git a/src/main/java/com/university/Course.java b/src/main/java/com/university/Course.java[m
-[1mdeleted file mode 100644[m
-[1mindex 409b37f..0000000[m
-[1m--- a/src/main/java/com/university/Course.java[m
-[1m+++ /dev/null[m
-[36m@@ -1,61 +0,0 @@[m
-[31m-package com.university;[m
-[31m-[m
-[31m-public class Course {[m
-[31m-[m
-[31m-    private final String courseCode;[m
-[31m-    private final String courseName;[m
-[31m-    private final int credits;[m
-[31m-    private final int capacity;[m
-[31m-    private int currentEnrollment;[m
-[31m-    private final boolean active;[m
-[31m-    private final String prerequisite;[m
-[31m-[m
-[31m-    public Course([m
-[31m-            String courseCode,[m
-[31m-            String courseName,[m
-[31m-            int credits,[m
-[31m-            int capacity,[m
-[31m-            boolean active,[m
-[31m-            String prerequisite) {[m
-[31m-[m
-[31m-        this.courseCode = courseCode;[m
-[31m-        this.courseName = courseName;[m
-[31m-        this.credits = credits;[m
-[31m-        this.capacity = capacity;[m
-[31m-        this.currentEnrollment = 0;[m
-[31m-        this.active = active;[m
-[31m-        this.prerequisite = prerequisite;[m
-[31m-    }[m
-[31m-[m
-[31m-    public String getCourseCode() {[m
-[31m-        return courseCode;[m
-[31m-    }[m
-[31m-[m
-[31m-    public String getCourseName() {[m
-[31m-        return courseName;[m
-[31m-    }[m
-[31m-[m
-[31m-    public int getCredits() {[m
-[31m-        return credits;[m
-[31m-    }[m
-[31m-[m
-[31m-    public int getCapacity() {[m
-[31m-        return capacity;[m
-[31m-    }[m
-[31m-[m
-[31m-    public int getCurrentEnrollment() {[m
-[31m-        return currentEnrollment;[m
-[31m-    }[m
-[31m-[m
-[31m-    public boolean isActive() {[m
-[31m-        return active;[m
-[31m-    }[m
-[31m-[m
-[31m-    public String getPrerequisite() {[m
-[31m-        return prerequisite;[m
-[31m-    }[m
-[31m-[m
-[31m-    public void incrementEnrollment() {[m
-[31m-        currentEnrollment++;[m
-[31m-    }[m
-[31m-}[m
-\ No newline at end of file[m
-[1mdiff --git a/src/main/java/com/university/RegistrationService.java b/src/main/java/com/university/RegistrationService.java[m
-[1mdeleted file mode 100644[m
-[1mindex 291aa42..0000000[m
-[1m--- a/src/main/java/com/university/RegistrationService.java[m
-[1m+++ /dev/null[m
-[36m@@ -1,41 +0,0 @@[m
-[31m-package com.university;[m
-[31m-[m
-[31m-public class RegistrationService {[m
-[31m-[m
-[31m-    private static final int MAX_CREDITS = 20;[m
-[31m-[m
-[31m-    public boolean register(Student student, Course course) {[m
-[31m-[m
-[31m-        if (!course.isActive()) {[m
-[31m-            return false;[m
-[31m-        }[m
-[31m-[m
-[31m-        if (course.getCurrentEnrollment() > course.getCapacity()) {[m
-[31m-            return false;[m
-[31m-        }[m
